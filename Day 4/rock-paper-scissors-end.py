@@ -29,17 +29,21 @@ scissors = '''
 
 choiceList = [rock, paper, scissors]
 
-choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
-print(choiceList[choice])
+userChoice = input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n")
+if userChoice not in [0, 1, 2]:
+    print("You typed an invalid number! You lose!")
+    exit()
+userChoice = int(userChoice)
+print(choiceList[userChoice])
 
-print("Computer chose:\n")
 compChoice = random.randint(0,2)
+print(f"Computer chose: {compChoice}\n")
 print(choiceList[compChoice])
 
 compBeats = (compChoice + 1) % 3
-if (compBeats == choice):
+if (compBeats == userChoice):
     print("Win!")
-elif (compChoice == choice):
+elif (compChoice == userChoice):
     print("Tie!")
 else:
     print("Loss!")

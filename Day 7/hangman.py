@@ -27,7 +27,6 @@ guessedLetters = []
 correctCount = 0
 
 print(hangman_art.logo)
-print(word)
 while (not checkWin() and lives != 0):
 
     guess = input("Guess a letter: ")

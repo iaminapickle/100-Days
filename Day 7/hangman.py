@@ -41,6 +41,6 @@ while (not checkWin() and lives != 0):
         printWord(correctCount)
 
 if (lives == 0):
-    print("You lose!")
+    print(f"You lose! The word was {word}")
 else:
     print("You win!")

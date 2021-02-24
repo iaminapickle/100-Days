@@ -1,11 +1,17 @@
 import random
+
+HARD_LIVES = 5
+EASY_LIVES = 10
+
+
 print("Welcome to the Number Guessing Game!\nI'm thinking of a number between 1 and 100")
 difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ")
 
+
 if difficulty == 'easy':
-    lives = 10
+    lives = EASY_LIVES
 elif difficulty == 'hard':
-    lives = 5
+    lives = HARD_LIVES
 
 number = random.randint(1, 100)
 while (lives != 0):
